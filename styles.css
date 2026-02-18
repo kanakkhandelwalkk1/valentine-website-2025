@@ -115,20 +115,20 @@ body {
     pointer-events: none;
 }
   button {
-  margin-top: 20px;
-  padding: 10px 26px;
-  border-radius: 22px;
-  border: none;
-  background: #ff6b6b;
+  background: linear-gradient(135deg, #ff7a7a, #ff9a9a);
   color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
   font-size: 0.95rem;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(255, 122, 122, 0.35);
 }
 
 button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 20px rgba(255,107,107,0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(255, 122, 122, 0.45);
 }
 
 .secret-answer {
@@ -174,16 +174,16 @@ button:hover {
 }
 
 .slider {
-    width: 100%;
-    height: 25px;
-    background: linear-gradient(to right, #ff6b6b, #ff8787, #ffb8b8);
-    -webkit-appearance: none;
-    appearance: none;
-    outline: none;
-    position: relative;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.2);
-    transition: all 0.3s ease;
+  width: 100%;
+  height: 12px;
+  border-radius: 20px;
+  background: linear-gradient(
+    to right,
+    #ff9a9a,
+    #ffb4b4
+  );
+  appearance: none;
+  outline: none;
 }
 
 .slider:hover {
@@ -203,36 +203,27 @@ button:hover {
 
 /* Ensure thumb is properly styled */
 .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 35px;
-    height: 35px;
-    background: linear-gradient(135deg, #ff4757, #ff6b6b);
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 2px 10px rgba(255, 71, 87, 0.3);
-    position: relative;
-    z-index: 10;
-    margin-top: -5px;
-    border: 3px solid white;
-    transition: all 0.2s ease;
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  background: radial-gradient(circle, #ff6f6f, #ff4f4f);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(255, 79, 79, 0.5);
+  transition: transform 0.2s ease;
 }
 
 .slider::-webkit-slider-thumb:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+  transform: scale(1.1);
 }
 
 .slider::-moz-range-thumb {
-    width: 35px;
-    height: 35px;
-    background: linear-gradient(135deg, #ff4757, #ff6b6b);
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 2px 10px rgba(255, 71, 87, 0.3);
-    position: relative;
-    z-index: 10;
-    border: 3px solid white;
-    transition: all 0.2s ease;
+  width: 26px;
+  height: 26px;
+  background: radial-gradient(circle, #ff6f6f, #ff4f4f);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
 }
 
 .slider::-moz-range-thumb:hover {
@@ -423,11 +414,10 @@ h2 {
 }
 
 .obsession-verdict {
-  margin-top: 14px;
-  font-size: 0.9rem;
-  color: #3a3a3a;
+  font-size: 0.95rem;
+  color: #5a5a5a;
   font-style: italic;
-  text-align: center;
+  margin-top: 12px;
 }
 
 .page {
