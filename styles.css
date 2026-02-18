@@ -20,13 +20,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, var(--background-color-1), var(--background-color-2));
+    background: linear-gradient(135deg, #2c2c54, #40407a);
     font-family: Arial, sans-serif;
     overflow-x: hidden;
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.92);
     padding: 2rem;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -377,4 +377,31 @@ h2 {
 
 .page.active {
   display: block;
+}
+.photo-pair {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.photo-pair .photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+.music-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  backdrop-filter: blur(6px);
+  cursor: pointer;
 }
