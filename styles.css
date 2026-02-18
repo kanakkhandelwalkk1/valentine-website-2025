@@ -422,10 +422,14 @@ h2 {
   color: #3a3a3a;
 }
 
-#obsessionResult {
-  font-weight: 600;
-  color: #7a2c2c;
+.obsession-verdict {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: #3a3a3a;
+  font-style: italic;
+  text-align: center;
 }
+
 .page {
   display: none;
 }
