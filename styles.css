@@ -114,22 +114,6 @@ body {
     cursor: not-allowed;
     pointer-events: none;
 }
-  button {
-  background: linear-gradient(135deg, #ff7a7a, #ff9a9a);
-  color: white;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(255, 122, 122, 0.35);
-}
-
-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 25px rgba(255, 122, 122, 0.45);
-}
 
 .secret-answer {
     position: fixed;
@@ -465,4 +449,31 @@ h2 {
   border-radius: 50%;
   border: none;
   cursor: pointer;
+}
+button {
+  background: linear-gradient(135deg, #ff6f91, #ff8fab);
+  color: white;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 111, 145, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(255, 111, 145, 0.45);
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 26px;
+  height: 26px;
+  background: #ffffff;
+  border-radius: 50%;
+  border: 3px solid #ff6f91;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
