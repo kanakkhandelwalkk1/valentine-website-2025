@@ -29,15 +29,25 @@ body {
     font-family: Arial, sans-serif;
     overflow-x: hidden;
 }
+.page {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
 
+.page.active {
+  display: flex;
+}
 .container {
-  backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.92);
+  width: 100%;
+  max-width: 900px;
+  padding: 60px 40px;
   border-radius: 22px;
-  box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.25),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.4);
-  animation: floatCard 6s ease-in-out infinite;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
 }
 
 @keyframes floatCard {
@@ -105,20 +115,20 @@ body {
     pointer-events: none;
 }
   button {
-  background: #ff6b81;
-  color: white;
+  margin-top: 20px;
+  padding: 10px 26px;
+  border-radius: 22px;
   border: none;
-  padding: 10px 22px;
-  border-radius: 20px;
+  background: #ff6b6b;
+  color: white;
   font-size: 0.95rem;
   cursor: pointer;
-  margin-top: 20px;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 button:hover {
-  background: #ff4757;
-  transform: scale(1.05);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(255,107,107,0.4);
 }
 
 .secret-answer {
@@ -291,17 +301,18 @@ button:hover {
 }
 
 h1, h2 {
-    font-family: Arial, sans-serif;
-    font-weight: 700;
+  color: #7a1f2a;
+  margin-bottom: 12px;
 }
 
 h1 {
-    color: #6b1e1e;
-    margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 h2 {
-    color: #7a2c2c;
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 
 .super-love {
@@ -386,14 +397,23 @@ h2 {
   color: #555;
   font-style: italic;
 }
-.obsession-meter {
-  margin-top: 30px;
+.obsession-title {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #2f2f2f;
+  margin-bottom: 4px;
+  letter-spacing: 0.3px;
 }
 
-.obsession-title {
-  font-size: 1.3rem;
-  color: #6b1e1e;
-  margin-bottom: 15px;
+.obsession-subtitle {
+  font-size: 0.85rem;
+  color: #6a6a6a;
+  margin-bottom: 16px;
+}
+
+.obsession-meter {
+  width: 100%;
+  max-width: 500px;
 }
 
 .obsession-text {
@@ -463,17 +483,17 @@ h2 {
 }
 .main-message {
   font-size: 1.05rem;
-  line-height: 1.9;
+  line-height: 1.8;
   color: #2f2f2f;
-  margin-bottom: 22px;
+  max-width: 620px;
 }
 
 .closing-line {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-style: italic;
-  color: #4b4b4b;
-  margin-top: 10px;
+  color: #555;
 }
+
 .soft-icons {
   font-size: 1.2rem;
   opacity: 0.6;
