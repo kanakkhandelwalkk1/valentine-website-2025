@@ -11,22 +11,21 @@
   <div class="container">
 
     <!-- PAGE 1 -->
-    <section class="card active">
-      <h1>For you. Just because.</h1>
+    <section class="page active">
+    <h1>For you. Just because.</h1>
 
-      <img 
-        src="https://i.imgur.com/bxpxEno_d.webp" 
-        alt="Us"
-        class="photo"
-      />
+    <img
+      src="https://i.imgur.com/bxpxEno_d.webp"
+      alt="Us"
+      class="photo"
+    />
 
-      <button onclick="nextCard()">Next</button>
-    </section>
+    <button onclick="nextPage()">Next</button>
+  </section>
 
     <!-- PAGE 2 -->
-    <!-- Obsession Meter -->
-<div class="obsession-meter">
-  <h2 class="obsession-title">Be honest… how obsessed are you with me?</h2>
+   <section class="page">
+   <h2 class="obsession-title">Be honest… how obsessed are you with me?</h2>
 
   <input
     type="range"
@@ -34,17 +33,15 @@
     max="100"
     value="70"
     class="slider"
-    id="obsessionSlider"
+    oninput="updateVerdict(this.value)"
   >
 
-  <p class="obsession-text">
-    Verdict:
-    <span id="obsessionResult">lowkey obsessed</span>
-    (<span id="obsessionValue">70</span>%)
-  </p>
-</div>
+  <p id="verdict">Verdict: lowkey obsessed 😌 (70%)</p>
 
-    <section class="card">
+  <button onclick="nextPage()">Next</button>
+</section>
+
+    <section class="page">
       <p>
         I know it’s a little late, and I know I’m not always
         the best girlfriend — but I try, every day, in the
@@ -60,11 +57,11 @@ you truly mean to me.
         I needed.
       </p>
 
-      <button onclick="nextCard()">Next</button>
+      <button onclick="nextPage()">Next</button>
     </section>
 
     <!-- PAGE 3 -->
-    <section class="card celebration">
+    <section class="page">
       <h2>Always, you 🤍</h2>
 
       <p>
@@ -82,5 +79,36 @@ you truly mean to me.
   </div>
 
   <script src="script.js"></script>
+  <script src="script.js"></script>
+
+<script>
+  let currentPage = 0;
+  const pages = document.querySelectorAll(".page");
+
+  function nextPage() {
+    pages[currentPage].classList.remove("active");
+    currentPage++;
+    if (currentPage < pages.length) {
+      pages[currentPage].classList.add("active");
+    }
+  }
+
+  function updateVerdict(value) {
+    const verdict = document.getElementById("verdict");
+
+    if (value < 25) {
+      verdict.textContent = `Verdict: pretending not to care 😏 (${value}%)`;
+    } else if (value < 50) {
+      verdict.textContent = `Verdict: mildly obsessed 👀 (${value}%)`;
+    } else if (value < 75) {
+      verdict.textContent = `Verdict: lowkey obsessed 😌 (${value}%)`;
+    } else if (value < 95) {
+      verdict.textContent = `Verdict: dangerously obsessed 😳 (${value}%)`;
+    } else {
+      verdict.textContent = `Verdict: absolutely gone for me 🫠❤️ (${value}%)`;
+    }
+  }
+</script>
+
 </body>
 </html>
