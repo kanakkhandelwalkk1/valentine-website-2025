@@ -1,53 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Browser tab title -->
-    <title>For you 🤍</title>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Just For You 🤍</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <div class="container">
 
-    <div class="container">
+    <!-- PAGE 1 -->
+    <section class="card active">
+      <h1>For you. Just because.</h1>
 
-        <!-- Title -->
-        <h1 class="card-title">For you. Just because.</h1>
+      <img 
+        src="https://i.imgur.com/YOURIMAGE.jpg" 
+        alt="Us"
+        class="photo"
+      />
 
-        <!-- Photo -->
-        <!-- Replace "him.jpg" with your image file name OR an image URL -->
-        <img src="https://ibb.co/9mwxB3sr" "https://ibb.co/s9fvZG04" alt="You" class="partner-photo">
+      <button onclick="nextCard()">Next</button>
+    </section>
 
-        <!-- Message -->
-        <div class="card-message">
-            <p>
-                I don’t always know how to put things into words,
-                but I know this — having you in my life makes everything
-                feel calmer, warmer, and more real.
-            </p>
+    <!-- PAGE 2 -->
+    <section class="card">
+      <p>
+        I know it’s a little late, and I know I’m not always
+        the best girlfriend — but I try, every day, in the
+        ways I know how.
 
-            <p>
-                You feel like home in a way I didn’t even know I needed.
-                I’m grateful for you, for us, and for the quiet moments
-                that don’t need explaining.
-            </p>
+I just wanted you to know, from the deepest part
+of my heart, how much I love you and how much
+you truly mean to me.
+      </p>
 
-            <p>
-                I love you — genuinely, deeply, and always.
-            </p>
-        </div>
+      <p>
+        You feel like home in a way I didn’t even know  
+        I needed.
+      </p>
 
-        <!-- Closing -->
-        <p class="card-sign">Always you 🤍</p>
+      <button onclick="nextCard()">Next</button>
+    </section>
 
-    </div>
+    <!-- PAGE 3 -->
+    <section class="card celebration">
+      <h2>Always, you 🤍</h2>
 
+      <p>
+        Thank you for being patient with me, for choosing
+        me, and for being my calm in all the noise.
+
+        I love you — quietly, deeply, and always.
+      </p>
+
+      <div class="emojis">
+        ❤️✨🫂🥰🥹🫶🏻👻
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
