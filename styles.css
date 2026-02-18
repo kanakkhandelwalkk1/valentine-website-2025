@@ -371,3 +371,10 @@ h2 {
   font-weight: 600;
   color: #7a2c2c;
 }
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
