@@ -20,7 +20,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #2c2c54, #40407a);
+    background: radial-gradient(
+      circle at top,
+      rgba(255, 255, 255, 0.08),
+      transparent 40%
+    ),
+    linear-gradient(135deg, #2c2c54, #40407a);
     font-family: Arial, sans-serif;
     overflow-x: hidden;
 }
@@ -98,6 +103,22 @@ body {
     opacity: 0.7;
     cursor: not-allowed;
     pointer-events: none;
+}
+  button {
+  background: #ff6b81;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #ff4757;
+  transform: scale(1.05);
 }
 
 .secret-answer {
@@ -452,4 +473,10 @@ h2 {
   font-style: italic;
   color: #4b4b4b;
   margin-top: 10px;
+}
+.soft-icons {
+  font-size: 1.2rem;
+  opacity: 0.6;
+  margin-bottom: 12px;
+  letter-spacing: 6px;
 }
