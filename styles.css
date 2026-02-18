@@ -351,3 +351,23 @@ h2 {
   color: #555;
   font-style: italic;
 }
+.obsession-meter {
+  margin-top: 30px;
+}
+
+.obsession-title {
+  font-size: 1.3rem;
+  color: #6b1e1e;
+  margin-bottom: 15px;
+}
+
+.obsession-text {
+  margin-top: 12px;
+  font-size: 1rem;
+  color: #3a3a3a;
+}
+
+#obsessionResult {
+  font-weight: 600;
+  color: #7a2c2c;
+}
