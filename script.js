@@ -240,3 +240,23 @@ function setupMusicPlayer() {
         }
     });
 } 
+const obsessionSlider = document.getElementById("obsessionSlider");
+const obsessionValue = document.getElementById("obsessionValue");
+const obsessionResult = document.getElementById("obsessionResult");
+
+if (obsessionSlider) {
+  obsessionSlider.addEventListener("input", () => {
+    const value = obsessionSlider.value;
+    obsessionValue.textContent = value;
+
+    if (value < 30) {
+      obsessionResult.textContent = "emotionally unavailable 😒";
+    } else if (value < 60) {
+      obsessionResult.textContent = "trying to act normal";
+    } else if (value < 85) {
+      obsessionResult.textContent = "definitely attached";
+    } else {
+      obsessionResult.textContent = "deeply unwell about me 🫠";
+    }
+  });
+}
