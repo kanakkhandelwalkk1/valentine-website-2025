@@ -5,7 +5,7 @@
     --background-color-2: #ffc3a0;
     --button-color: #ff6b6b;
     --button-hover: #ff8787;
-    --text-color: #ff4757;
+    --text-color: #5a1a1a; /* soft deep rose-brown */
 
     /* Animations */
     --float-duration: 15s;
@@ -261,12 +261,12 @@ h1, h2 {
 }
 
 h1 {
-    color: #ff6b6b;
+    color: #6b1e1e;
     margin-bottom: 2rem;
 }
 
 h2 {
-    color: #ff8787;
+    color: #7a2c2c;
 }
 
 .super-love {
@@ -301,7 +301,7 @@ h2 {
 }
 
 .music-btn {
-    background: var(--primary-color);
+    background: var(--button-color);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -314,7 +314,7 @@ h2 {
 
 .music-btn:hover {
     transform: scale(1.05);
-    background: var(--secondary-color);
+    background: var(--button-hover);
 } 
 .card-title {
   font-family: 'Dancing Script', cursive;
@@ -337,7 +337,7 @@ h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 0.95rem;
   line-height: 1.7;
-  color: #ddd;
+  color: #3a3a3a;
   margin-top: 20px;
 }
 
@@ -348,6 +348,6 @@ h2 {
 .card-sign {
   margin-top: 30px;
   font-size: 0.9rem;
-  color: #aaa;
+  color: #555;
   font-style: italic;
 }
